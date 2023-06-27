@@ -43,6 +43,8 @@ duration-100 after:absolute after:inset-0 after:bg-current after:opacity-0 hover
  * @param iconLeft An optional icon to display on the left side of the button.
  * @param iconRight An optional icon to display on the right side of the button.
  * @param children The text to display inside the button.
+ * @param onClick A callback function to be called when the button is clicked.
+ * @param disabled Whether or not the button is disabled. Defaults to false.
  * @returns A button element with the specified visual style, text, and icons.
  */
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(

@@ -10,24 +10,28 @@ const meta: Meta<typeof Button> = {
   tags: ["autodocs"],
   argTypes: {
     variant: {
-      description: "A default button will fill the background with the color, while an outlined button will only have a border.",
       options: ["filled", "tonal", "outlined", "elavated", "text"],
-    },
-    children: {
-      description: "The text to display inside the button.",
-      type: "string",
-    },
-    onClick: {
-      description: "The function to call when the button is clicked.",
-      action: "onClick",
+      description: "The visual style of the button. Defaults to `filled`.",
     },
     iconLeft: {
-      description: "An icon to display to the left of the text.",
       control: "none",
+      description: "An optional icon to display on the left side of the button.",
     },
     iconRight: {
-      description: "An icon to display to the right of the text.",
       control: "none",
+      description: "An optional icon to display on the right side of the button.",
+    },
+    children: {
+      type: "string",
+      description: "The text to display inside the button.",
+    },
+    onClick: {
+      action: "onClick",
+      description: "A callback function to be called when the button is clicked.",
+    },
+    disabled: {
+      type: "boolean",
+      description: "Whether or not the button is disabled. Defaults to `false`.",
     },
   },
 };
