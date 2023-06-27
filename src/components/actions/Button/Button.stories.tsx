@@ -1,30 +1,33 @@
-import React from 'react';
-import type { Meta, StoryObj } from '@storybook/react';
-import { MdShoppingCart } from 'react-icons/md';
+import React from "react";
+import type { Meta, StoryObj } from "@storybook/react";
+import { MdShoppingCart } from "react-icons/md";
 
-import { Button } from '.';
+import { Button } from ".";
 
 const meta: Meta<typeof Button> = {
   component: Button,
-  tags: ['autodocs'],
+  title: "Actions/Button",
+  tags: ["autodocs"],
   argTypes: {
     variant: {
-      description: 'A default button will fill the background with the color, while an outlined button will only have a border.',
-      options: ['filled', 'tonal', 'outlined', 'elavated', 'text'],
+      description: "A default button will fill the background with the color, while an outlined button will only have a border.",
+      options: ["filled", "tonal", "outlined", "elavated", "text"],
     },
     children: {
-      description: 'The text to display inside the button.',
-      type: 'string',
+      description: "The text to display inside the button.",
+      type: "string",
     },
     onClick: {
-      description: 'The function to call when the button is clicked.',
-      action: 'onClick',
+      description: "The function to call when the button is clicked.",
+      action: "onClick",
     },
     iconLeft: {
-      description: 'An icon to display to the left of the text.',
+      description: "An icon to display to the left of the text.",
+      control: "none",
     },
     iconRight: {
-      description: 'An icon to display to the right of the text.',
+      description: "An icon to display to the right of the text.",
+      control: "none",
     },
   },
 };
@@ -34,16 +37,16 @@ type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {
   args: {
-    children: 'Button',
+    children: "Button",
   },
   render: (args) => (
-    <div className="flex gap-4">
+    <>
       <Button {...args} />
       <Button {...args} variant="tonal" />
       <Button {...args} variant="outlined" />
       <Button {...args} variant="elavated" />
       <Button {...args} variant="text" />
-    </div>
+    </>
   ),
 };
 
