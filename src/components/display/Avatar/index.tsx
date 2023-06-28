@@ -14,8 +14,8 @@ interface AvatarProps {
 
 /**
  * Avatar component displays an image or initials of a user.
- * @param size The size of the avatar. Can be "xs", "sm", "md", or "lg".
- * @param ring The color of the ring around the avatar. Can be "primary" or "secondary".
+ * @param size The size of the avatar.
+ * @param ring The color of the ring around the avatar.
  * @param src The source URL of the image to display.
  * @param name The name of the user, it will be formatted depending on the size of the avatar.
  * @param badgeText The text to display in the badge.

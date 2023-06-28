@@ -16,6 +16,8 @@ module.exports = {
         "surface-container-low": "hsl(var(--surface-container-low) / <alpha-value>)",
         "surface-container-highest": "hsl(var(--surface-container-highest) / <alpha-value>)",
         "on-surface": "hsl(var(--on-surface) / <alpha-value>)",
+        "inverse-surface": "hsl(var(--inverse-surface) / <alpha-value>)",
+        "inverse-on-surface": "hsl(var(--inverse-on-surface) / <alpha-value>)",
         background: "hsl(var(--background) / <alpha-value>)",
         error: "hsl(var(--error) / <alpha-value>)",
         "on-error": "hsl(var(--on-error) / <alpha-value>)",
@@ -24,6 +26,9 @@ module.exports = {
       boxShadow: {
         "elevation-1": "0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12)",
         "elevation-2": "0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
+      },
+      borderRadius: {
+        "xs": "0.25rem",
       },
       fontSize: {
         "body-small": [
