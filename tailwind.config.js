@@ -38,7 +38,7 @@ module.exports = {
           "0.75rem",
           {
             lineHeight: "1rem",
-            fontWeight: "400",
+            fontWeight: "calc(400 * var(--font-weight-multiplier))",
             letterSpacing: "0.033em",
           },
         ],
@@ -46,7 +46,7 @@ module.exports = {
           "0.875rem",
           {
             lineHeight: "1.25rem",
-            fontWeight: "400",
+            fontWeight: "calc(400 * var(--font-weight-multiplier))",
             letterSpacing: "0.018em",
           },
         ],
@@ -54,7 +54,7 @@ module.exports = {
           "1rem",
           {
             lineHeight: "1.5rem",
-            fontWeight: "400",
+            fontWeight: "calc(400 * var(--font-weight-multiplier))",
             letterSpacing: "0.031em",
           },
         ],
@@ -62,7 +62,7 @@ module.exports = {
           "0.625rem",
           {
             lineHeight: "1rem",
-            fontWeight: "500",
+            fontWeight: "calc(500 * var(--font-weight-multiplier))",
             letterSpacing: "0.045em",
           },
         ],
@@ -70,7 +70,7 @@ module.exports = {
           "0.75rem",
           {
             lineHeight: "1rem",
-            fontWeight: "500",
+            fontWeight: "calc(500 * var(--font-weight-multiplier))",
             letterSpacing: "0.042em",
           },
         ],
@@ -78,7 +78,7 @@ module.exports = {
           "0.875rem",
           {
             lineHeight: "1.25rem",
-            fontWeight: "500",
+            fontWeight: "calc(500 * var(--font-weight-multiplier))",
             letterSpacing: "0.007em",
           },
         ],

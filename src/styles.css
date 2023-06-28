@@ -21,6 +21,8 @@ html {
   --error: 3 71% 41%;
   --on-error: 0 0% 100%;
   --outline: 270 4% 47%;
+  --font-weight-multiplier: 1;
+  --inverse-font-weight-multiplier: 0.8;
 }
 
 html.dark {
@@ -40,4 +42,10 @@ html.dark {
   --error: 3 70% 83%;
   --on-error: 3 71% 22%;
   --outline: 264 5% 58%;
+  --font-weight-multiplier: 0.8;
+  --inverse-font-weight-multiplier: 1;
+}
+
+.inverse-font-weight-multiplier {
+  --font-weight-multiplier: var(--inverse-font-weight-multiplier);
 }

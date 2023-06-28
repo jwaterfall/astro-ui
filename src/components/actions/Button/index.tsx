@@ -13,7 +13,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const getVariantStyles = (variant: ButtonVariant) => {
   switch (variant) {
     case "filled":
-      return "bg-primary text-on-primary";
+      return "bg-primary text-on-primary inverse-font-weight-multiplier";
     case "tonal":
       return "bg-secondary-container text-on-secondary-container";
     case "outlined":
