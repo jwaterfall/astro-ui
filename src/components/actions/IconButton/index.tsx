@@ -9,7 +9,7 @@ interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 /**
- * A button component that displays an icon.
+ * Icon buttons help people take supplementary actions with a single tap.
  * @param variant The visual style of the button. Defaults to "filled".
  * @param icon The icon to display inside the button.
  * @param onClick A callback function to be called when the button is clicked.

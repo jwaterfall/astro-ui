@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         primary: "hsl(var(--primary) / <alpha-value>)",
         "on-primary": "hsl(var(--on-primary) / <alpha-value>)",
+        "inverse-primary": "hsl(var(--inverse-primary) / <alpha-value>)",
         "secondary-container": "hsl(var(--secondary-container) / <alpha-value>)",
         "on-secondary-container": "hsl(var(--on-secondary-container) / <alpha-value>)",
         surface: "hsl(var(--surface) / <alpha-value>)",
@@ -26,6 +27,7 @@ module.exports = {
       boxShadow: {
         "elevation-1": "0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12)",
         "elevation-2": "0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
+        "elevation-3": "0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
       },
       borderRadius: {
         xs: "0.25rem",
@@ -74,6 +76,23 @@ module.exports = {
       },
       animation: {
         "spin-slow": "spin 3s linear infinite",
+        "snackbar-open": "slide-in-right 150ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "snackbar-close": "fade-out 100ms ease-in",
+        "snackbar-swipe-end": "snackbar-swipe-out 150ms ease-out",
+      },
+      keyframes: {
+        "fade-out": {
+          "0%": { opacity: 1 },
+          "100%": { opacity: 0 },
+        },
+        "slide-in-right": {
+          "0%": { transform: "translateX(50vw)" },
+          "100%": { transform: "translateX(0)" },
+        },
+        "snackbar-swipe-out": {
+          "0%": { transform: "translateX(var(--radix-toast-swipe-end-x))" },
+          "100%": { transform: "translateX(50vw)" },
+        },
       },
       data: {
         checked: 'state="checked"',

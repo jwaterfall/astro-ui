@@ -10,7 +10,7 @@ interface TooltipProps {
 }
 
 /**
- * Tooltip component that displays a tooltip with the given text when hovered over, you must have a TooltipProvider as an ancestor.
+ * Tooltips are informative, specific, and action-oriented text labels that provide contextual support
  * @param text The text to display in the tooltip.
  * @param side The side of the trigger to display the tooltip on.
  * @param align The alignment of the tooltip relative to the trigger.

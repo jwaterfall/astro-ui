@@ -8,7 +8,7 @@ import { Tooltip, TooltipProvider } from ".";
 
 const meta: Meta<typeof Tooltip> = {
   component: Tooltip,
-  title: "Display/Tooltip",
+  title: "Containment/Tooltip",
   tags: ["autodocs"],
   argTypes: {
     text: {

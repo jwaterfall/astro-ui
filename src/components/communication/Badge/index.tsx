@@ -1,7 +1,7 @@
 import React, { FC, PropsWithChildren } from "react";
 
 /**
- * A badge component that displays a small piece of information, such as a status or a count.
+ * Badges convey dynamic information, such as counts or status. A badge can include labels or numbers.
  * @param children The text to display inside the badge.
  */
 export const Badge: FC<PropsWithChildren> = ({ children }) => (

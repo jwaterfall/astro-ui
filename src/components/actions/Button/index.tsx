@@ -39,7 +39,7 @@ export const baseStyles = `text-label-large relative inline-flex h-10 select-non
   after:opacity-0 hover:after:opacity-5 active:after:opacity-10 disabled:after:opacity-0`;
 
 /**
- * A customizable button component that can display text and icons.
+ * Buttons help people take action, such as sending an email, sharing a document, or liking a comment.
  * @param variant The visual style of the button. Defaults to "filled".
  * @param iconLeft An optional icon to display on the left side of the button.
  * @param iconRight An optional icon to display on the right side of the button.

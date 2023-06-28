@@ -12,7 +12,7 @@ interface AvatarProps {
 }
 
 /**
- * Avatar component displays an image or initials of a user.
+ * Avatars are used to represent a user or entity. They can be used with or without an image.
  * @param size The size of the avatar.
  * @param ring The color of the ring around the avatar.
  * @param src The source URL of the image to display.

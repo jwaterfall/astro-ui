@@ -7,6 +7,7 @@
 html {
   --primary: 256 34% 48%;
   --on-primary: 0 0% 100%;
+  --inverse-primary: 258 100% 87%;
   --secondary-container: 263 65% 92%;
   --on-secondary-container: 257 26% 13%;
   --surface: 293 100% 98%;
@@ -24,6 +25,7 @@ html {
 html.dark {
   --primary: 258 100% 87%;
   --on-primary: 258 59% 28%;
+  --inverse-primary: 256 34% 48%;
   --secondary-container: 258 13% 31%;
   --on-secondary-container: 263 65% 92%;
   --surface: 260 14% 8%;

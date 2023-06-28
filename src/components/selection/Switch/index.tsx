@@ -9,7 +9,7 @@ interface SwitchProps {
 }
 
 /**
- * A switch component that can be toggled on or off.
+ * Switches toggle the state of a single item on or off.
  * @param value The current value of the switch.
  * @param onChange A function that will be called when the switch is toggled.
  * @param disabled Whether the switch is disabled or not.
