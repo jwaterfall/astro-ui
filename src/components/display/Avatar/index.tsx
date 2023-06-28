@@ -8,7 +8,6 @@ interface AvatarProps {
   size?: "xs" | "sm" | "md" | "lg";
   ring?: "primary" | "secondary";
   src?: string;
-  name?: string;
   badgeText?: string;
 }
 
@@ -17,10 +16,9 @@ interface AvatarProps {
  * @param size The size of the avatar.
  * @param ring The color of the ring around the avatar.
  * @param src The source URL of the image to display.
- * @param name The name of the user, it will be formatted depending on the size of the avatar.
  * @param badgeText The text to display in the badge.
  */
-export const Avatar: FC<AvatarProps> = ({ size = "md", ring, src, name, badgeText }) => {
+export const Avatar: FC<AvatarProps> = ({ size = "md", ring, src, badgeText }) => {
   const getSizeStyles = () => {
     switch (size) {
       case "xs":
@@ -50,25 +48,9 @@ export const Avatar: FC<AvatarProps> = ({ size = "md", ring, src, name, badgeTex
   const getRingStyles = () => {
     switch (ring) {
       case "primary":
-        return "animate-spin-slow animation bg-gradient-to-r from-green-500 via-blue-500 to-purple-500";
-      case "secondary":
         return "bg-primary";
-    }
-  };
-
-  const getFormattedName = () => {
-    switch (size) {
-      case "xs":
-        return name?.[0];
-      case "sm":
-        return name
-          ?.split(" ")
-          .map((n) => n[0])
-          .join("");
-      case "md":
-        return name?.split(" ")[0];
-      default:
-        return name;
+      case "secondary":
+        return "animate-spin-slow animation bg-gradient-to-r from-green-500 via-blue-500 to-purple-500";
     }
   };
 
@@ -76,11 +58,11 @@ export const Avatar: FC<AvatarProps> = ({ size = "md", ring, src, name, badgeTex
     <div className={`absolute z-10 ${!ring ? "inset-0" : "inset-1"}`}>
       <AvatarPrimitive.Image className="rounded-full" src={src} />
       <AvatarPrimitive.Fallback
-        className={`flex h-full w-full items-center justify-center overflow-hidden overflow-ellipsis rounded-full bg-surface-container-low p-1 text-center text-body-small text-on-surface ${
+        className={`flex h-full w-full items-center justify-center overflow-hidden overflow-ellipsis rounded-full bg-surface-container-low p-1 text-center text-label-medium text-on-surface ${
           size === "sm" ? "uppercase" : "capitalize"
         }`}
       >
-        {name ? getFormattedName() : <MdPerson size={getIconSize()} />}
+        <MdPerson size={getIconSize()} />
       </AvatarPrimitive.Fallback>
     </div>
   );

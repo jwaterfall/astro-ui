@@ -20,10 +20,6 @@ const meta: Meta<typeof Avatar> = {
       description: "The source URL of the image to display.",
       type: "string",
     },
-    name: {
-      description: "The name of the user, it will be formatted depending on the size of the avatar.",
-      type: "string",
-    },
     badgeText: {
       description: "The text to display in the badge.",
       type: "string",
@@ -61,15 +57,7 @@ export const WithSecondaryRing: Story = {
   },
 };
 
-export const WithName: Story = {
-  ...Default,
-  args: {
-    src: undefined,
-    name: "john doe",
-  },
-};
-
-export const Placeholder: Story = {
+export const WithNoImage: Story = {
   ...Default,
   args: {
     src: undefined,

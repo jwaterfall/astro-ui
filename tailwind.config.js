@@ -28,7 +28,7 @@ module.exports = {
         "elevation-2": "0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
       },
       borderRadius: {
-        "xs": "0.25rem",
+        xs: "0.25rem",
       },
       fontSize: {
         "body-small": [
@@ -71,6 +71,9 @@ module.exports = {
             letterSpacing: "0.007em",
           },
         ],
+      },
+      animation: {
+        "spin-slow": "spin 3s linear infinite",
       },
       data: {
         checked: 'state="checked"',
