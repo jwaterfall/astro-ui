@@ -12,6 +12,7 @@ html {
   --on-secondary-container: 257 26% 13%;
   --surface: 293 100% 98%;
   --surface-container-low: 278 44% 96%;
+  --surface-container: 276 38% 95%;
   --surface-container-highest: 280 17% 90%;
   --on-surface: 255 7% 11%;
   --on-surface-variant: 267 6% 29%;
@@ -33,6 +34,7 @@ html.dark {
   --on-secondary-container: 263 65% 92%;
   --surface: 260 14% 8%;
   --surface-container-low: 264 8% 12%;
+  --surface-container: 257 10% 14%;
   --surface-container-highest: 257 6% 22%;
   --on-surface: 312 9% 89%;
   --on-surface-variant: 270 11% 79%;
@@ -43,9 +45,13 @@ html.dark {
   --on-error: 3 71% 22%;
   --outline: 264 5% 58%;
   --font-weight-multiplier: 0.8;
-  --inverse-font-weight-multiplier: 1;
+  --inverse-font-weight-multiplier: 1.1;
 }
 
 .inverse-font-weight-multiplier {
   --font-weight-multiplier: var(--inverse-font-weight-multiplier);
+}
+
+.standard-font-weight-multiplier {
+  --font-weight-multiplier: var(--font-weight-multiplier) !important;
 }

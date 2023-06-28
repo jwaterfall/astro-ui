@@ -15,6 +15,7 @@ module.exports = {
         "on-secondary-container": "hsl(var(--on-secondary-container) / <alpha-value>)",
         surface: "hsl(var(--surface) / <alpha-value>)",
         "surface-container-low": "hsl(var(--surface-container-low) / <alpha-value>)",
+        "surface-container": "hsl(var(--surface-container) / <alpha-value>)",
         "surface-container-highest": "hsl(var(--surface-container-highest) / <alpha-value>)",
         "on-surface": "hsl(var(--on-surface) / <alpha-value>)",
         "on-surface-variant": "hsl(var(--on-surface-variant) / <alpha-value>)",

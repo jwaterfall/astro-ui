@@ -10,10 +10,10 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children?: string;
 }
 
-export const getVariantStyles = (variant: ButtonVariant) => {
+export const getVariantStyles = (variant: ButtonVariant, disabled?: boolean) => {
   switch (variant) {
     case "filled":
-      return "bg-primary text-on-primary inverse-font-weight-multiplier";
+      return `bg-primary text-on-primary ${disabled ? "" : "inverse-font-weight-multiplier"}`;
     case "tonal":
       return "bg-secondary-container text-on-secondary-container";
     case "outlined":
@@ -52,7 +52,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     <button
       {...props}
       ref={ref}
-      className={`${baseStyles} ${getVariantStyles(variant)} ${getDisabledStyles(variant)} ${IconLeft ? "pl-4" : "pl-6"} ${
+      className={`${baseStyles} ${getVariantStyles(variant, props.disabled)} ${getDisabledStyles(variant)} ${IconLeft ? "pl-4" : "pl-6"} ${
         IconRight ? "pr-4" : "pr-6"
       }`}
     >
