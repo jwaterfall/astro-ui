@@ -1,11 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .text-label-large {
-    @apply font-sans font-medium text-sm;
-  }
+html {
+  --primary: 256 34% 48%;
+  --on-primary: 0 0% 100%;
+  --secondary-container: 263 65% 92%;
+  --on-secondary-container: 257 26% 13%;
+  --surface: 293 100% 98%;
+  --surface-container-low: 278 44% 96%;
+  --surface-container-highest: 280 17% 90%;
+  --on-surface: 255 7% 11%;
+  --background: 293 100% 98%;
+  --error: 3 71% 41%;
+  --on-error: 0 0% 100%;
+  --outline: 270 4% 47%;
+}
+
+html.dark {
+  --primary: 258 100% 87%;
+  --on-primary: 258 59% 28%;
+  --secondary-container: 258 13% 31%;
+  --on-secondary-container: 263 65% 92%;
+  --surface: 260 14% 8%;
+  --surface-container-low: 264 8% 12%;
+  --surface-container-highest: 257 6% 22%;
+  --on-surface: 312 9% 89%;
+  --background: 260 14% 8%;
+  --error: 3 70% 83%;
+  --on-error: 3 71% 22%;
+  --outline: 264 5% 58%;
 }

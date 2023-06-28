@@ -19,18 +19,16 @@ export const Switch: FC<SwitchProps> = ({ value, onChange, disabled = false }) =
     checked={value}
     disabled={disabled}
     onCheckedChange={onChange}
-    className="data group relative inline-flex h-8 w-[3.25rem] items-center rounded-full border-2 border-neutral-50 bg-neutral-90 disabled:opacity-10
-      data-checked:border-primary-40 data-checked:bg-primary-40 data-checked:disabled:border-neutral-10 data-checked:disabled:bg-neutral-10
-      dark:border-neutral-60 dark:bg-neutral-20 dark:data-checked:border-primary-80 dark:data-checked:bg-primary-80 
-      dark:data-checked:disabled:border-neutral-90 dark:data-checked:disabled:bg-neutral-90"
+    className="data group relative inline-flex h-8 w-[3.25rem] items-center rounded-full border-2 border-outline bg-surface-container-highest disabled:opacity-10
+      data-checked:border-primary data-checked:bg-primary data-checked:disabled:border-on-surface data-checked:disabled:bg-on-surface"
   >
     <SwitchPrimitive.Thumb
-      className="group absolute left-1.5 flex aspect-square h-4 items-center justify-center rounded-full bg-neutral-50 text-primary-40 ring-zinc-100/10
-        transition-['box-shadow,transform'] group-hover:ring-[0.75rem] group-disabled:bg-neutral-10 group-disabled:text-neutral-10 group-disabled:group-hover:ring-0
-        data-checked:h-6 data-checked:translate-x-4 data-checked:bg-primary-100 data-checked:group-disabled:bg-neutral-99 data-unchecked:group-active:left-0
-        data-unchecked:group-active:h-7 data-unchecked:group-disabled:group-active:left-1.5 data-unchecked:group-disabled:group-active:h-4 dark:bg-neutral-60
-        dark:text-primary-80 group-disabled:dark:bg-neutral-90 dark:group-disabled:text-neutral-90 dark:data-checked:bg-primary-20
-        dark:data-checked:group-disabled:bg-neutral-10"
+      className="group absolute left-1.5 flex aspect-square h-4 items-center justify-center rounded-full bg-outline text-primary ring-primary/10
+        transition-['box-shadow,transform'] ease-in-out group-hover:ring-[0.75rem] group-active:h-7 group-disabled:bg-on-surface
+        group-disabled:text-on-surface group-disabled:group-hover:ring-0 data-checked:h-6 data-checked:translate-x-4 data-checked:bg-on-primary
+        data-checked:group-active:translate-x-3.5 data-checked:group-disabled:bg-surface data-checked:group-disabled:group-active:h-6
+        data-checked:group-disabled:group-active:translate-x-4 data-unchecked:group-active:-translate-x-1.5
+        data-unchecked:group-disabled:translate-x-0 data-unchecked:group-disabled:group-active:h-4"
     >
       <div className="hidden group-data-checked:block">
         <MdCheck size={16} />

@@ -53,6 +53,7 @@
     "react-icons": "^4.10.1"
   },
   "dependencies": {
+    "@radix-ui/react-avatar": "^1.0.3",
     "@radix-ui/react-switch": "^1.0.3"
   }
 }

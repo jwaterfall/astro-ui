@@ -13,29 +13,30 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 export const getVariantStyles = (variant: ButtonVariant) => {
   switch (variant) {
     case "filled":
-      return "bg-primary-40 text-primary-100 dark:bg-primary-80 dark:text-primary-20";
+      return "bg-primary text-on-primary";
     case "tonal":
-      return "bg-secondary-90 text-secondary-10 dark:bg-secondary-30 dark:text-secondary-90";
+      return "bg-secondary-container text-on-secondary-container";
     case "outlined":
-      return "bg-transparent text-primary-40 border border-neutral-50 dark:text-primary-80 dark:border-neutral-60";
+      return "bg-transparent text-primary border border-outline";
     case "elavated":
-      return "bg-neutral-95 text-primary-40 dark:bg-neutral-10 dark:text-primary-80 shadow-elevation-1 hover:shadow-elevation-2 active:shadow-elevation-1";
+      return "bg-surface-container-low text-primary shadow-elevation-1 hover:shadow-elevation-2 active:shadow-elevation-1";
     case "text":
-      return "bg-transparent text-primary-40 dark:text-primary-80";
+      return "bg-transparent text-primary";
   }
 };
 
 export const getDisabledStyles = (variant: ButtonVariant) => {
   switch (variant) {
     case "outlined":
-      return "disabled:text-neutral-10/40 disabled:border-neutral-10/40 dark:disabled:text-neutral-90/40 dark:disabled:border-neutral-90/40";
+      return "disabled:text-on-surface/40 disabled:border-on-surface/40";
     default:
-      return "disabled:bg-neutral-10/10 disabled:text-neutral-10/40 disabled:shadow-none dark:disabled:bg-neutral-90/10 dark:disabled:text-neutral-90/40";
+      return "disabled:bg-on-surface/10 disabled:text-on-surface/40 disabled:shadow-none";
   }
 };
 
-export const baseStyles = `text-label-large relative inline-flex h-10 select-none items-center justify-center gap-2 overflow-hidden rounded-full transition-colors
-duration-100 after:absolute after:inset-0 after:bg-current after:opacity-0 hover:after:opacity-5 active:after:opacity-10 disabled:after:opacity-0`;
+export const baseStyles = `text-label-large relative inline-flex h-10 select-none items-center justify-center gap-2
+  overflow-hidden rounded-full transition-colors duration-100 after:absolute after:inset-0 after:bg-current
+  after:opacity-0 hover:after:opacity-5 active:after:opacity-10 disabled:after:opacity-0`;
 
 /**
  * A customizable button component that can display text and icons.
@@ -45,7 +46,6 @@ duration-100 after:absolute after:inset-0 after:bg-current after:opacity-0 hover
  * @param children The text to display inside the button.
  * @param onClick A callback function to be called when the button is clicked.
  * @param disabled Whether or not the button is disabled. Defaults to false.
- * @returns A button element with the specified visual style, text, and icons.
  */
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ variant = "filled", iconLeft: IconLeft, iconRight: IconRight, children, ...props }, ref) => (

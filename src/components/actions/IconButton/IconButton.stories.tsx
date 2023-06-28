@@ -6,7 +6,7 @@ import { IconButton } from ".";
 
 const meta: Meta<typeof IconButton> = {
   component: IconButton,
-  title: "Actions/IconButton",
+  title: "Actions/Icon Button",
   tags: ["autodocs"],
   argTypes: {
     variant: {

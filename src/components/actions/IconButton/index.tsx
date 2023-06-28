@@ -14,7 +14,6 @@ interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
  * @param icon The icon to display inside the button.
  * @param onClick A callback function to be called when the button is clicked.
  * @param disabled Whether or not the button is disabled. Defaults to false.
- * @returns A button element with the specified visual style and icon.
  */
 export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(({ variant = "filled", icon: Icon, children, ...props }, ref) => (
   <button {...props} ref={ref} className={`${baseStyles} ${getVariantStyles(variant)} ${getDisabledStyles(variant)} aspect-square`}>
