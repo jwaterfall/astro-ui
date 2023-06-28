@@ -14,6 +14,7 @@ html {
   --surface-container-low: 278 44% 96%;
   --surface-container-highest: 280 17% 90%;
   --on-surface: 255 7% 11%;
+  --on-surface-variant: 267 6% 29%;
   --inverse-surface: 260 3% 19%;
   --inverse-on-surface: 300 19% 95%;
   --background: 293 100% 98%;
@@ -32,6 +33,7 @@ html.dark {
   --surface-container-low: 264 8% 12%;
   --surface-container-highest: 257 6% 22%;
   --on-surface: 312 9% 89%;
+  --on-surface-variant: 270 11% 79%;
   --inverse-surface: 312 9% 89%;
   --inverse-on-surface: 260 3% 19%;
   --background: 260 14% 8%;

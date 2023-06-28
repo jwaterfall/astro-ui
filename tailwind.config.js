@@ -17,6 +17,7 @@ module.exports = {
         "surface-container-low": "hsl(var(--surface-container-low) / <alpha-value>)",
         "surface-container-highest": "hsl(var(--surface-container-highest) / <alpha-value>)",
         "on-surface": "hsl(var(--on-surface) / <alpha-value>)",
+        "on-surface-variant": "hsl(var(--on-surface-variant) / <alpha-value>)",
         "inverse-surface": "hsl(var(--inverse-surface) / <alpha-value>)",
         "inverse-on-surface": "hsl(var(--inverse-on-surface) / <alpha-value>)",
         background: "hsl(var(--background) / <alpha-value>)",
@@ -47,6 +48,14 @@ module.exports = {
             lineHeight: "1.25rem",
             fontWeight: "400",
             letterSpacing: "0.018em",
+          },
+        ],
+        "body-large": [
+          "1rem",
+          {
+            lineHeight: "1.5rem",
+            fontWeight: "400",
+            letterSpacing: "0.031em",
           },
         ],
         "label-small": [

@@ -2,8 +2,14 @@ import React, { FC, PropsWithChildren } from "react";
 import { MdClose } from "react-icons/md";
 import * as ToastPrimitive from "@radix-ui/react-toast";
 
+/**
+ * It provides the context for the snackbars.
+ */
 export const SnackbarProvider = ToastPrimitive.Provider;
 
+/**
+ * The container that displays the snackbars at the bottom center of the screen.
+ */
 export const SnackbarDisplay: FC = () => (
   <ToastPrimitive.Viewport className="fixed bottom-0 left-0 z-50 flex w-screen flex-col items-center gap-2 p-4" />
 );
