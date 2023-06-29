@@ -9,11 +9,11 @@ const meta: Meta<typeof Avatar> = {
   tags: ["autodocs"],
   argTypes: {
     size: {
-      description: 'The size of the avatar. Can be "xs", "sm", "md", or "lg".',
+      description: "The size of the avatar.",
       options: ["xs", "sm", "md", "lg"],
     },
     ring: {
-      description: 'The color of the ring around the avatar. Can be "primary" or "secondary".',
+      description: "The color of the ring around the avatar.",
       options: ["primary", "secondary"],
     },
     src: {

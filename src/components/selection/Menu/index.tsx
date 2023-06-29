@@ -21,7 +21,7 @@ export const Menu: FC<PropsWithChildren<MenuProps>> = ({ trigger, children, ...p
       <DropdownMenuPrimitive.Content
         sideOffset={8}
         {...props}
-        className="bg-surface-container min-w-[14rem] max-w-[18rem]  rounded-[0.25rem] py-2 shadow-sm"
+        className="min-w-[14rem] max-w-[18rem] rounded-[0.25rem]  bg-surface-container py-2 shadow-sm"
       >
         {children}
       </DropdownMenuPrimitive.Content>
@@ -56,4 +56,4 @@ export const MenuItem: FC<MenuItemProps> = ({ icon: Icon, rightElement, children
   </DropdownMenuPrimitive.Item>
 );
 
-export const MenuDivider: FC = () => <DropdownMenuPrimitive.Separator className="" />;
+export const MenuDivider: FC = () => <DropdownMenuPrimitive.Separator className="bg-outline-variant h-px" />;
