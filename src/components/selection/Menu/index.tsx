@@ -21,7 +21,7 @@ export const Menu: FC<PropsWithChildren<MenuProps>> = ({ trigger, children, ...p
       <DropdownMenuPrimitive.Content
         sideOffset={8}
         {...props}
-        className="min-w-[14rem] max-w-[18rem] rounded-[0.25rem]  bg-surface-container py-2 shadow-sm"
+        className="bg-surface-5 min-w-[14rem] max-w-[18rem]  rounded-[0.25rem] py-2 shadow-sm"
       >
         {children}
       </DropdownMenuPrimitive.Content>
@@ -48,10 +48,10 @@ interface MenuItemProps {
 export const MenuItem: FC<MenuItemProps> = ({ icon: Icon, rightElement, children, ...props }) => (
   <DropdownMenuPrimitive.Item
     {...props}
-    className="flex h-12 items-center gap-3 px-3 text-label-large text-on-surface-variant outline-none data-[highlighted]:bg-on-surface/10"
+    className="text-label-large text-on-surface-variant data-[highlighted]:bg-on-surface/10 flex h-12 items-center gap-3 px-3 outline-none"
   >
     {Icon && <Icon size={18} />}
-    <span className="flex-1 text-on-surface ">{children}</span>
+    <span className="text-on-surface flex-1 ">{children}</span>
     <span className="text-xs">{rightElement}</span>
   </DropdownMenuPrimitive.Item>
 );

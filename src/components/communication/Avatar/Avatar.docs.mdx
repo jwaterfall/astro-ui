@@ -1,0 +1,122 @@
+---
+type: component
+title: avatar
+category: communication
+description: Avatars are used to represent users and can contain photos or text.
+classes:
+  - name: avatar
+    type: component
+    description: The container for the avatar
+  - name: avatar-xs
+    type: modifier
+    description: The smallest avatar size
+  - name: avatar-sm
+    type: modifier
+    description: The small avatar size
+  - name: avatar-lg
+    type: modifier
+    description: The large avatar size
+  - name: avatar-image
+    type: component
+    description: The image inside the avatar
+  - name: avatar-ring
+    type: component
+    description: Used to create a ring around the avatar
+  - name: avatar-ring-content
+    type: component
+    description: The container for the avatar image when using a ring
+published: true
+---
+
+<CodePreview title="Default">
+  <>
+    <div className="avatar avatar-xs">
+      <img src="/avatar1.jpg" className="avatar-image" />
+    </div>
+    <div className="avatar avatar-sm">
+      <img src="/avatar2.jpg" className="avatar-image" />
+    </div>
+    <div className="avatar">
+      <img src="/avatar3.jpg" className="avatar-image" />
+    </div>
+    <div className="avatar avatar-lg">
+      <img src="/avatar4.jpg" className="avatar-image" />
+    </div>
+  </>
+</CodePreview>
+
+<CodePreview title="With ring">
+  <>
+    <div className="avatar avatar-xs">
+      <div className="avatar-ring" />
+      <div className="avatar-ring-content">
+        <img src="/avatar1.jpg" className="avatar-image" />
+      </div>
+    </div>
+    <div className="avatar avatar-sm">
+      <div className="avatar-ring" />
+      <div className="avatar-ring-content">
+        <img src="/avatar2.jpg" className="avatar-image" />
+      </div>
+    </div>
+    <div className="avatar">
+      <div className="avatar-ring" />
+      <div className="avatar-ring-content">
+        <img src="/avatar3.jpg" className="avatar-image" />
+      </div>
+    </div>
+    <div className="avatar avatar-lg">
+      <div className="avatar-ring" />
+      <div className="avatar-ring-content">
+        <img src="/avatar4.jpg" className="avatar-image" />
+      </div>
+    </div>
+  </>
+</CodePreview>
+
+<CodePreview title="With badge">
+  <>
+    <div className="avatar avatar-sm">
+      <span className="badge avatar-badge">3</span>
+      <img src="/avatar2.jpg" className="avatar-image" />
+    </div>
+    <div className="avatar">
+      <span className="badge avatar-badge">24</span>
+      <img src="/avatar3.jpg" className="avatar-image" />
+    </div>
+    <div className="avatar avatar-lg">
+      <span className="badge avatar-badge">999+</span>
+      <img src="/avatar4.jpg" className="avatar-image" />
+    </div>
+  </>
+</CodePreview>
+
+<CodePreview title="With text">
+  <>
+    <div className="avatar avatar-xs">J</div>
+    <div className="avatar avatar-sm">JW</div>
+    <div className="avatar">JW</div>
+    <div className="avatar avatar-lg">JW</div>
+  </>
+</CodePreview>
+
+<CodePreview title="Using Radix UI">
+  <>
+    <RadixAvatarRoot className="avatar avatar-xs">
+      <RadixAvatarImage src="/avatar1.jpg" className="avatar-image" />
+      <RadixAvatarFallback>J</RadixAvatarFallback>
+    </RadixAvatarRoot>
+    <RadixAvatarRoot className="avatar avatar-sm">
+      <RadixAvatarImage src="/avatar2.jpg" className="avatar-image" />
+      <RadixAvatarFallback>JW</RadixAvatarFallback>
+    </RadixAvatarRoot>
+    <RadixAvatarRoot className="avatar">
+      <RadixAvatarImage src="/avatar3.jpg" className="avatar-image" />
+      <RadixAvatarFallback>JW</RadixAvatarFallback>
+    </RadixAvatarRoot>
+    <RadixAvatarRoot className="avatar avatar-lg">
+      <RadixAvatarImage src="/avatar4.jpg" className="avatar-image" />
+      <RadixAvatarFallback>JW</RadixAvatarFallback>
+    </RadixAvatarRoot>
+  </>
+</CodePreview>

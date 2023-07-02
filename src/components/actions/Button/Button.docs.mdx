@@ -1,0 +1,184 @@
+---
+type: component
+title: button
+category: actions
+description: Buttons help people take action, such as sending an email, sharing a document, or liking a comment.
+classes:
+  - name: btn
+    type: component
+    description: Button (Defaults to a primary filled button)
+  - name: btn-tonal
+    type: modifier
+    description: Reduces the contrast of the button
+  - name: btn-outlined
+    type: modifier
+    description: Removes the background of the button and adds a border
+  - name: btn-elevated
+    type: modifier
+    description: Adds a shadow to the button and replaces the background with a neutral color
+  - name: btn-text
+    type: modifier
+    description: Removes the background of the button
+  - name: btn-info
+    type: modifier
+    description: Changes the button to the info color
+  - name: btn-success
+    type: modifier
+    description: Changes the button to the success color
+  - name: btn-warning
+    type: modifier
+    description: Changes the button to the warning color
+  - name: btn-error
+    type: modifier
+    description: Changes the button to the error color
+  - name: btn-icon-left
+    type: modifier
+    description: Adjusts the left padding to accommodate an icon
+  - name: btn-icon-right
+    type: modifier
+    description: Adjusts the right padding to accommodate an icon
+  - name: btn-icon
+    type: modifier
+    description: Circular button with a 1:1 aspect ratio
+published: true
+---
+
+<CodePreview title="Primary">
+  <>
+    <button className="btn">Filled</button>
+    <button className="btn btn-tonal">Tonal</button>
+    <button className="btn btn-outlined">Outlined</button>
+    <button className="btn btn-elevated">Elevated</button>
+    <button className="btn btn-text">Text</button>
+  </>
+</CodePreview>
+
+<CodePreview title="Info">
+  <>
+    <button className="btn btn-info">Filled</button>
+    <button className="btn btn-info btn-tonal">Tonal</button>
+    <button className="btn btn-info btn-outlined">Outlined</button>
+    <button className="btn btn-info btn-elevated">Elevated</button>
+    <button className="btn btn-info btn-text">Text</button>
+  </>
+</CodePreview>
+
+<CodePreview title="Success">
+  <>
+    <button className="btn btn-success">Filled</button>
+    <button className="btn btn-success btn-tonal">Tonal</button>
+    <button className="btn btn-success btn-outlined">Outlined</button>
+    <button className="btn btn-success btn-elevated">Elevated</button>
+    <button className="btn btn-success btn-text">Text</button>
+  </>
+</CodePreview>
+
+<CodePreview title="Warning">
+  <>
+    <button className="btn btn-warning">Filled</button>
+    <button className="btn btn-warning btn-tonal">Tonal</button>
+    <button className="btn btn-warning btn-outlined">Outlined</button>
+    <button className="btn btn-warning btn-elevated">Elevated</button>
+    <button className="btn btn-warning btn-text">Text</button>
+  </>
+</CodePreview>
+
+<CodePreview title="Error">
+  <>
+    <button className="btn btn-error">Filled</button>
+    <button className="btn btn-error btn-tonal">Tonal</button>
+    <button className="btn btn-error btn-outlined">Outlined</button>
+    <button className="btn btn-error btn-elevated">Elevated</button>
+    <button className="btn btn-error btn-text">Text</button>
+  </>
+</CodePreview>
+
+<CodePreview title="Disabled">
+  <>
+    <button className="btn" disabled>
+      Filled
+    </button>
+    <button className="btn btn-tonal" disabled>
+      Tonal
+    </button>
+    <button className="btn btn-outlined" disabled>
+      Outlined
+    </button>
+    <button className="btn btn-elevated" disabled>
+      Elevated
+    </button>
+    <button className="btn btn-text" disabled>
+      Text
+    </button>
+  </>
+</CodePreview>
+
+<CodePreview title="With left icon">
+  <>
+    <button className="btn btn-icon-left">
+      <MdShoppingCart size={18} />
+      Add to cart
+    </button>
+    <button className="btn btn-icon-left btn-tonal">
+      <MdShoppingCart size={18} />
+      Add to cart
+    </button>
+    <button className="btn btn-icon-left btn-outlined">
+      <MdShoppingCart size={18} />
+      Add to cart
+    </button>
+    <button className="btn btn-icon-left btn-elevated">
+      <MdShoppingCart size={18} />
+      Add to cart
+    </button>
+    <button className="btn btn-icon-left btn-text">
+      <MdShoppingCart size={18} />
+      Add to cart
+    </button>
+  </>
+</CodePreview>
+
+<CodePreview title="With right icon">
+  <>
+    <button className="btn btn-icon-right">
+      Add to cart
+      <MdShoppingCart size={18} />
+    </button>
+    <button className="btn btn-icon-right btn-tonal">
+      Add to cart
+      <MdShoppingCart size={18} />
+    </button>
+    <button className="btn btn-icon-right btn-outlined">
+      Add to cart
+      <MdShoppingCart size={18} />
+    </button>
+    <button className="btn btn-icon-right btn-elevated">
+      Add to cart
+      <MdShoppingCart size={18} />
+    </button>
+    <button className="btn btn-icon-right btn-text">
+      Add to cart
+      <MdShoppingCart size={18} />
+    </button>
+  </>
+</CodePreview>
+
+<CodePreview title="With icon">
+  <>
+    <button className="btn btn-icon">
+      <MdShoppingCart size={18} />
+    </button>
+    <button className="btn btn-icon btn-tonal">
+      <MdShoppingCart size={18} />
+    </button>
+    <button className="btn btn-icon btn-outlined">
+      <MdShoppingCart size={18} />
+    </button>
+    <button className="btn btn-icon btn-elevated">
+      <MdShoppingCart size={18} />
+    </button>
+    <button className="btn btn-icon btn-text">
+      <MdShoppingCart size={18} />
+    </button>
+  </>
+</CodePreview>

@@ -1,0 +1,31 @@
+.snackbar {
+  @apply rounded-xs bg-surface-2 text-body-medium text-on-surface shadow-elevation-3 flex h-12 w-full max-w-4xl items-center gap-3 px-4;
+
+  &:has(&-close) {
+    @apply pr-3;
+  }
+
+  &:has(&-action):not(:has(&-close)) {
+    @apply pr-2;
+  }
+
+  &-content {
+    @apply flex-1;
+  }
+
+  &-action {
+    @apply rounded-xs text-label-large text-on-primary bg-transparent px-3 py-2;
+
+    &:hover {
+      @apply bg-primary/25;
+    }
+  }
+
+  &-close {
+    @apply rounded-full p-2;
+
+    &:hover {
+      @apply bg-on-surface/10;
+    }
+  }
+}

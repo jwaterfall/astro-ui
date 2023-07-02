@@ -1,0 +1,3 @@
+.badge {
+  @apply flex h-4 w-fit items-center gap-1 rounded-full bg-error px-1 text-label-small text-on-error;
+}

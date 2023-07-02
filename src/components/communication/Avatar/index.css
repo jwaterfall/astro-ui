@@ -1,0 +1,31 @@
+.avatar {
+  @apply bg-surface-1 text-body-medium text-on-surface relative flex aspect-square h-12 items-center justify-center rounded-full;
+
+  &-xs {
+    @apply h-8;
+  }
+
+  &-sm {
+    @apply text-body-small h-10;
+  }
+
+  &-lg {
+    @apply text-body-large h-16;
+  }
+
+  &-image {
+    @apply rounded-full object-cover;
+  }
+
+  &-ring {
+    @apply animate-spin-slow after:bg-surface-0 absolute inset-0 rounded-full bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 after:absolute after:inset-0.5 after:rounded-full;
+
+    &-content {
+      @apply absolute inset-1;
+    }
+  }
+
+  &-badge {
+    @apply absolute -right-0.5 -top-0.5;
+  }
+}

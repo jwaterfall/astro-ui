@@ -1,8 +1,6 @@
 import React, { FC, PropsWithChildren } from "react";
 import { IconType } from "react-icons";
 
-import { Badge } from "../../communication/Badge";
-
 interface NavigationBarItemProps {
   icon: IconType;
   activeIcon?: IconType;
@@ -25,19 +23,15 @@ export const NavigationBarItem: FC<PropsWithChildren<NavigationBarItemProps>> = 
   children,
 }) => (
   <div
-    className={`group flex cursor-pointer select-none flex-col items-center justify-center text-label-medium
+    className={`text-label-medium group flex cursor-pointer select-none flex-col items-center justify-center
       ${active ? "text-on-surface" : "text-on-surface-variant"}`}
   >
     <div
       className={`relative mx-auto flex h-8 w-16 items-center justify-center rounded-full after:absolute after:inset-0
         after:rounded-full after:opacity-0 group-hover:after:opacity-5 group-active:after:opacity-10 
-        ${active ? "bg-secondary-container text-on-secondary-container after:bg-on-surface" : "after:bg-on-surface-variant"}`}
+        ${active ? "bg-secondary text-on-secondary after:bg-on-surface" : "after:bg-on-surface-variant"}`}
     >
-      {badgeText && (
-        <div className="absolute -top-0.5 right-0.5 z-20">
-          <Badge>{badgeText}</Badge>
-        </div>
-      )}
+      {badgeText && <span className="badge absolute -top-0.5 right-0.5 z-20">{badgeText}</span>}
       {active && ActiveIcon ? <ActiveIcon size={24} /> : <Icon size={24} />}
     </div>
     {children && <div className="block truncate py-1">{children}</div>}
@@ -48,5 +42,5 @@ export const NavigationBarItem: FC<PropsWithChildren<NavigationBarItemProps>> = 
  * Navigation bars offer a persistent and convenient way to switch between primary destinations in an app.
  */
 export const NavigationBar: FC<PropsWithChildren> = ({ children }) => (
-  <nav className="grid h-20 w-full auto-cols-fr grid-flow-col gap-2 bg-surface-container">{children}</nav>
+  <nav className="bg-surface-2 grid h-20 w-full auto-cols-fr grid-flow-col gap-2">{children}</nav>
 );

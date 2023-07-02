@@ -2,8 +2,6 @@ import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { MdAddShoppingCart } from "react-icons/md";
 
-import { Avatar } from "../../communication/Avatar";
-import { Button } from "../../actions/Button";
 import { Switch } from "../../selection/Switch";
 
 import { List } from ".";
@@ -37,8 +35,12 @@ export const Default: Story = {
   args: {
     title: "Amy Farha",
     body: "You may know",
-    leftElement: <Avatar src="avatar1.jpg" />,
-    rightElement: <Button variant="tonal">Add friend</Button>,
+    leftElement: (
+      <div className="avatar">
+        <img src="avatar1.jpg" className="avatar-image" />
+      </div>
+    ),
+    rightElement: <button className="btn btn-tonal">Add friend</button>,
   },
 };
 
@@ -48,9 +50,10 @@ export const WithImage: Story = {
     body: "Plants",
     leftElement: <img src="bonsai.jpg" alt="Bonsai" className="h-14 w-28 rounded-xl object-cover" />,
     rightElement: (
-      <Button variant="tonal" iconLeft={MdAddShoppingCart}>
+      <button className="btn btn-tonal btn-icon-start">
+        <MdAddShoppingCart size={18} />
         Add to cart
-      </Button>
+      </button>
     ),
   },
 };

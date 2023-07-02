@@ -2,8 +2,6 @@ import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { MdHandyman } from "react-icons/md";
 
-import { IconButton } from "../../actions/IconButton";
-
 import { Tooltip, TooltipProvider } from ".";
 
 const meta: Meta<typeof Tooltip> = {
@@ -40,7 +38,9 @@ export const Default: Story = {
     return (
       <TooltipProvider>
         <Tooltip {...args}>
-          <IconButton icon={MdHandyman} />
+          <button className="btn btn-tonal btn-icon">
+            <MdHandyman size={18} />
+          </button>
         </Tooltip>
       </TooltipProvider>
     );

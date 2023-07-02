@@ -1,8 +1,6 @@
 import React, { Meta, StoryObj } from "@storybook/react";
 import { MdContentCopy, MdContentCut, MdContentPaste, MdMoreVert } from "react-icons/md";
 
-import { IconButton } from "../../actions/IconButton";
-
 import { Menu, MenuItem, MenuDivider } from ".";
 
 const meta: Meta<typeof Menu> = {
@@ -29,7 +27,11 @@ type Story = StoryObj<typeof Menu>;
 
 export const Default: Story = {
   args: {
-    trigger: <IconButton icon={MdMoreVert} />,
+    trigger: (
+      <button className="btn btn-tonal btn-icon">
+        <MdMoreVert size={18} />
+      </button>
+    ),
   },
   render(args) {
     return (

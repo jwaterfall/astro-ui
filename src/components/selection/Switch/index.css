@@ -1,0 +1,58 @@
+.switch {
+  @apply border-surface-2 bg-surface-2 relative inline-flex h-8 w-[3.25rem] items-center rounded-full border-2;
+
+  &:disabled {
+    @apply bg-on-surface text-on-surface translate-x-0 opacity-10;
+
+    &[data-state="checked"],
+    &[data-headlessui-state="checked"] {
+      @apply border-on-surface bg-on-surface;
+
+      & > .switch-thumb {
+        @apply bg-surface-2;
+      }
+    }
+
+    &:hover > .switch-thumb {
+      @apply ring-0;
+    }
+  }
+
+  &:not(:disabled):active {
+    & > .switch-thumb {
+      @apply h-7 -translate-x-1.5;
+    }
+
+    &[data-state="checked"],
+    &[data-headlessui-state="checked"] {
+      > .switch-thumb {
+        @apply h-7 translate-x-3.5;
+      }
+    }
+  }
+
+  &[data-state="checked"],
+  &[data-headlessui-state="checked"] {
+    @apply border-primary bg-primary;
+
+    & > .switch-thumb {
+      @apply bg-on-primary h-6 translate-x-4;
+
+      & > * {
+        @apply block;
+      }
+    }
+  }
+
+  &:hover > .switch-thumb {
+    @apply ring-[0.75rem];
+  }
+
+  &-thumb {
+    @apply bg-surface-2 text-primary ring-primary/10 absolute left-1.5 flex aspect-square h-4 items-center justify-center rounded-full transition-['box-shadow,transform'] ease-in-out;
+
+    & > * {
+      @apply hidden;
+    }
+  }
+}

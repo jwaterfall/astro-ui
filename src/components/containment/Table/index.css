@@ -1,0 +1,27 @@
+.table {
+  @apply outline-surface-2 text-on-surface text-body-medium w-full overflow-hidden rounded-md outline outline-1;
+
+  & thead {
+    @apply bg-surface-2;
+
+    & tr {
+      & > th {
+        @apply text-title-small  px-4 py-3 text-left;
+      }
+    }
+  }
+
+  & tbody {
+    @apply bg-surface-0;
+
+    & tr {
+      & > td {
+        @apply px-4 py-3;
+      }
+
+      &:nth-child(odd) {
+        @apply bg-surface-1;
+      }
+    }
+  }
+}
