@@ -2,7 +2,7 @@
 type: component
 title: avatar
 category: communication
-description: Avatars are used to represent users and can contain photos or text.
+description: Avatars are used to represent individuals or a business.
 classes:
   - name: avatar
     type: component
@@ -16,15 +16,15 @@ classes:
   - name: avatar-lg
     type: modifier
     description: The large avatar size
+  - name: avatar-ring
+    type: modifier
+    description: Used to create a ring around the avatar
   - name: avatar-image
     type: component
     description: The image inside the avatar
-  - name: avatar-ring
+  - name: avatar-badge
     type: component
-    description: Used to create a ring around the avatar
-  - name: avatar-ring-content
-    type: component
-    description: The container for the avatar image when using a ring
+    description: Positions a badge in the top right corner of the avatar
 published: true
 ---
 
@@ -47,56 +47,48 @@ published: true
 
 <CodePreview title="With ring">
   <>
-    <div className="avatar avatar-xs">
-      <div className="avatar-ring" />
-      <div className="avatar-ring-content">
-        <img src="/avatar1.jpg" className="avatar-image" />
-      </div>
+    <div className="avatar avatar-xs avatar-ring">
+      <img src="/avatar1.jpg" className="avatar-image" />
     </div>
-    <div className="avatar avatar-sm">
-      <div className="avatar-ring" />
-      <div className="avatar-ring-content">
-        <img src="/avatar2.jpg" className="avatar-image" />
-      </div>
+    <div className="avatar avatar-sm avatar-ring">
+      <img src="/avatar2.jpg" className="avatar-image" />
     </div>
-    <div className="avatar">
-      <div className="avatar-ring" />
-      <div className="avatar-ring-content">
-        <img src="/avatar3.jpg" className="avatar-image" />
-      </div>
+    <div className="avatar avatar-ring">
+      <img src="/avatar3.jpg" className="avatar-image" />
     </div>
-    <div className="avatar avatar-lg">
-      <div className="avatar-ring" />
-      <div className="avatar-ring-content">
-        <img src="/avatar4.jpg" className="avatar-image" />
-      </div>
+    <div className="avatar avatar-lg avatar-ring">
+      <img src="/avatar4.jpg" className="avatar-image" />
     </div>
   </>
 </CodePreview>
 
 <CodePreview title="With badge">
   <>
+    <div className="avatar avatar-xs">
+      <img src="/avatar1.jpg" className="avatar-image" />
+      <span className="badge badge-success avatar-badge" />
+    </div>
     <div className="avatar avatar-sm">
-      <span className="badge avatar-badge">3</span>
       <img src="/avatar2.jpg" className="avatar-image" />
+      <span className="badge avatar-badge">3</span>
     </div>
     <div className="avatar">
-      <span className="badge avatar-badge">24</span>
       <img src="/avatar3.jpg" className="avatar-image" />
+      <span className="badge avatar-badge">24</span>
     </div>
     <div className="avatar avatar-lg">
-      <span className="badge avatar-badge">999+</span>
       <img src="/avatar4.jpg" className="avatar-image" />
+      <span className="badge avatar-badge">999+</span>
     </div>
   </>
 </CodePreview>
 
 <CodePreview title="With text">
   <>
-    <div className="avatar avatar-xs">J</div>
-    <div className="avatar avatar-sm">JW</div>
-    <div className="avatar">JW</div>
-    <div className="avatar avatar-lg">JW</div>
+    <div className="avatar avatar-xs">A</div>
+    <div className="avatar avatar-sm">AF</div>
+    <div className="avatar">Anna</div>
+    <div className="avatar avatar-lg">Anna Faris</div>
   </>
 </CodePreview>
 
@@ -104,19 +96,19 @@ published: true
   <>
     <RadixAvatarRoot className="avatar avatar-xs">
       <RadixAvatarImage src="/avatar1.jpg" className="avatar-image" />
-      <RadixAvatarFallback>J</RadixAvatarFallback>
+      <RadixAvatarFallback>A</RadixAvatarFallback>
     </RadixAvatarRoot>
     <RadixAvatarRoot className="avatar avatar-sm">
       <RadixAvatarImage src="/avatar2.jpg" className="avatar-image" />
-      <RadixAvatarFallback>JW</RadixAvatarFallback>
+      <RadixAvatarFallback>AF</RadixAvatarFallback>
     </RadixAvatarRoot>
     <RadixAvatarRoot className="avatar">
       <RadixAvatarImage src="/avatar3.jpg" className="avatar-image" />
-      <RadixAvatarFallback>JW</RadixAvatarFallback>
+      <RadixAvatarFallback>Anna</RadixAvatarFallback>
     </RadixAvatarRoot>
     <RadixAvatarRoot className="avatar avatar-lg">
       <RadixAvatarImage src="/avatar4.jpg" className="avatar-image" />
-      <RadixAvatarFallback>JW</RadixAvatarFallback>
+      <RadixAvatarFallback>Anna Faris</RadixAvatarFallback>
     </RadixAvatarRoot>
   </>
 </CodePreview>

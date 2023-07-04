@@ -3,7 +3,6 @@
 import { FC } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { MdMouse, MdChat } from "react-icons/md";
 
 import { Doc, DocType } from "../utils/io";
 
@@ -35,9 +34,7 @@ const NavigationDrawer: FC<NavigationDrawerProps> = async ({ docs }) => {
 
         return (
           <>
-            <h4 className="nav-drawer-heading">
-              {category.charAt(0).toUpperCase() + category.slice(1).toLowerCase()}
-            </h4>
+            <h4 className="nav-drawer-heading">{category.charAt(0).toUpperCase() + category.slice(1).toLowerCase()}</h4>
             {categoryDocs.map((doc) => {
               const path = `/docs/${doc.title.replace(" ", "-")}`;
               return (

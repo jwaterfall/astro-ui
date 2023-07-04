@@ -1,28 +1,24 @@
 .avatar {
-  @apply bg-surface-1 text-body-medium text-on-surface relative flex aspect-square h-12 items-center justify-center rounded-full;
+  @apply bg-surface-2 text-body-small text-on-surface-variant relative flex aspect-square h-12 items-center justify-center rounded-full p-2 text-center;
 
   &-xs {
     @apply h-8;
   }
 
   &-sm {
-    @apply text-body-small h-10;
+    @apply h-10;
   }
 
   &-lg {
-    @apply text-body-large h-16;
+    @apply h-16;
   }
 
   &-image {
-    @apply rounded-full object-cover;
+    @apply absolute inset-0 rounded-full object-cover;
   }
 
   &-ring {
-    @apply animate-spin-slow after:bg-surface-0 absolute inset-0 rounded-full bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 after:absolute after:inset-0.5 after:rounded-full;
-
-    &-content {
-      @apply absolute inset-1;
-    }
+    @apply ring-primary ring-offset-surface-0 ring-2 ring-offset-2;
   }
 
   &-badge {

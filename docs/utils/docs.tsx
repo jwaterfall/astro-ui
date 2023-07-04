@@ -30,7 +30,7 @@ export async function readDoc(path: string): Promise<Doc> {
     throw new Error(`Component docs must have at least one class. Path: ${path}`);
   }
 
-  return { ...frontmatter, source: await serialize(content) };
+  return { ...frontmatter, source: await serialize(content, {mdxOptions: {}}) };
 }
 
 export async function getAllDocs(path: string): Promise<Doc[]> {

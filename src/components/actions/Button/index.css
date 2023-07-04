@@ -3,13 +3,14 @@
   inline-flex h-10 select-none items-center justify-center gap-2 overflow-hidden rounded-full px-6
   transition-colors duration-100 after:absolute after:inset-0 after:bg-current after:opacity-0;
 
+  /* Filled */
   &:not(.btn-tonal):not(.btn-outlined):not(.btn-elevated):not(.btn-text) {
     &.btn-info {
       @apply bg-info text-on-info;
     }
 
     &.btn-success {
-      @apply bg-primary text-on-primary;
+      @apply bg-success text-on-success;
     }
 
     &.btn-warning {
@@ -21,6 +22,7 @@
     }
   }
 
+  /* Tonal */
   &-tonal {
     @apply bg-primary/10 text-primary;
 
@@ -41,16 +43,18 @@
     }
   }
 
+  /* Outlined */
   &-outlined {
-    @apply border-surface-1 text-primary border bg-transparent;
+    @apply border border-current bg-transparent;
 
     &:disabled {
-      @apply border-on-surface/40 text-on-surface/40 bg-transparent;
+      @apply border-on-surface/10 text-on-surface/40;
     }
   }
 
+  /* Elevated */
   &-elevated {
-    @apply bg-surface-1 text-primary shadow-elevation-1;
+    @apply bg-surface-2 shadow-elevation-1;
 
     &:hover {
       @apply shadow-elevation-2;
@@ -65,14 +69,16 @@
     }
   }
 
+  /* Text */
   &-text {
-    @apply text-primary bg-transparent;
+    @apply bg-transparent;
   }
 
+  /* Outlined, Elevated and Text */
   &-outlined,
   &-elevated,
   &-text {
-    @apply after:bg-on-surface;
+    @apply text-primary;
 
     &.btn-info {
       @apply text-info;
@@ -91,18 +97,22 @@
     }
   }
 
-  &:hover {
-    @apply after:opacity-5;
-  }
-
-  &:disabled {
+  /* States */
+  &:disabled:not(.btn-outlined) {
     @apply bg-on-surface/10 text-on-surface/40;
   }
 
-  &:active {
-    @apply after:opacity-10;
+  &:not(:disabled) {
+    &:hover {
+      @apply after:opacity-5;
+    }
+
+    &:active {
+      @apply scale-95 after:opacity-10;
+    }
   }
 
+  /* Icons */
   &-icon-left {
     @apply pl-4;
   }

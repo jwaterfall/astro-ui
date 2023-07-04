@@ -1,3 +1,19 @@
 .badge {
-  @apply flex h-4 w-fit items-center gap-1 rounded-full bg-error px-1 text-label-small text-on-error;
+  @apply bg-primary text-label-small text-on-primary flex min-h-[0.5rem] w-fit items-center gap-1 rounded-full px-1;
+
+  &-info {
+    @apply bg-info text-on-info;
+  }
+
+  &-success {
+    @apply bg-success text-on-success;
+  }
+
+  &-warning {
+    @apply bg-warning text-on-warning;
+  }
+
+  &-error {
+    @apply bg-error text-on-error;
+  }
 }

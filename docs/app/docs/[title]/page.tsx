@@ -16,9 +16,10 @@ export default async function Home({ params }: { params: Doc }) {
     if (!doc) notFound();
 
     return (
-      <div className="flex flex-col gap-4">
-        <h1 className="text-title-large text-primary font-medium first-letter:uppercase">{doc.title}</h1>
-        <table className="table">
+      <div className="w-full max-w-4xl">
+        <h1 className="text-title-large text-on-surface font-medium first-letter:uppercase">{doc.title}</h1>
+        <p className="text-body-medium text-on-surface-variant my-2">{doc.description}</p>
+        <table className="my-4 table w-full">
           <thead>
             <tr>
               <th>Class</th>
@@ -29,7 +30,9 @@ export default async function Home({ params }: { params: Doc }) {
           <tbody>
             {doc.classes.map((c) => (
               <tr key={c.name}>
-                <td>{c.name}</td>
+                <td>
+                  <span className="bg-surface-3 text-on-surface rounded-sm px-2 py-1">{c.name}</span>
+                </td>
                 <td>{c.type}</td>
                 <td>{c.description}</td>
               </tr>

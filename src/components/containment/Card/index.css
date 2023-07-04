@@ -1,0 +1,19 @@
+.card {
+  @apply bg-surface-1 border-surface-2 overflow-hidden rounded-xl border;
+
+  &-image {
+    @apply w-full object-cover;
+  }
+
+  &-title {
+    @apply text-title-large text-on-surface mb-1 flex items-center gap-2;
+  }
+
+  &-body {
+    @apply text-body-medium text-on-surface-variant my-4 px-4;
+  }
+
+  &-footer {
+    @apply my-3 flex items-center justify-end gap-2 px-4;
+  }
+}

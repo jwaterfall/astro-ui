@@ -7,9 +7,33 @@ classes:
   - name: badge
     type: component
     description: Badge
+  - name: badge-info
+    type: modifier
+    description: Changes the color of the badge to info
+  - name: badge-success
+    type: modifier
+    description: Changes the color of the badge to success
+  - name: badge-warning
+    type: modifier
+    description: Changes the color of the badge to warning
+  - name: badge-error
+    type: modifier
+    description: Changes the color of the badge to error
 published: true
 ---
 
 <CodePreview title="Default">
   <span className="badge">Badge</span>
+  <span className="badge badge-info">Badge</span>
+  <span className="badge badge-success">Badge</span>
+  <span className="badge badge-warning">Badge</span>
+  <span className="badge badge-error">Badge</span>
+</CodePreview>
+
+<CodePreview title="Empty">
+  <span className="badge" />
+  <span className="badge badge-info" />
+  <span className="badge badge-success" />
+  <span className="badge badge-warning" />
+  <span className="badge badge-error" />
 </CodePreview>

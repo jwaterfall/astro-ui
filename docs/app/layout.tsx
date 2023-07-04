@@ -1,4 +1,5 @@
 import { FC, PropsWithChildren } from "react";
+import { FaGithub, FaNpm } from "react-icons/fa";
 
 import { getAllDocs } from "../utils/docs";
 import NavigationDrawer from "./NavigationDrawer";
@@ -17,11 +18,28 @@ const Layout: FC<PropsWithChildren> = async ({ children }) => {
   return (
     <html lang="en" className="dark">
       <body>
-        <main className="bg-surface-0 flex h-screen w-screen overflow-hidden">
-          <div className="overflow-y-auto">
-            <NavigationDrawer docs={docs} />
+        <main className="bg-surface-0 flex h-screen w-screen flex-col overflow-hidden">
+          <header className="top-app-bar">
+            <div className="top-app-bar-section">
+              <h1 className="text-title-large text-on-surface p-4 font-bold">
+                Astro<span className="text-primary">UI</span>
+              </h1>
+            </div>
+            <div className="top-app-bar-section">
+              <button className="btn btn-text btn-icon">
+                <FaNpm size={18} />
+              </button>
+              <button className="btn btn-text btn-icon">
+                <FaGithub size={18} />
+              </button>
+            </div>
+          </header>
+          <div className="flex flex-1 overflow-hidden ">
+            <div className="overflow-y-auto">
+              <NavigationDrawer docs={docs} />
+            </div>
+            <div className="flex-1 overflow-y-auto p-4">{children}</div>
           </div>
-          <div className="flex-1 overflow-y-auto p-4">{children}</div>
         </main>
       </body>
     </html>

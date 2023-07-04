@@ -1,11 +1,11 @@
 .nav-drawer {
-  @apply bg-surface-1 border-surface-2 text-on-surface min-h-full w-80 rounded-r-lg border-r px-3 py-4 text-sm font-medium;
+  @apply bg-surface-0 text-on-surface min-h-full w-80 px-3 py-4 text-sm font-medium;
 
   &-item {
     @apply text-label-large after:bg-on-surface relative flex h-12 w-full items-center gap-3 truncate rounded-full pl-4 pr-6 after:absolute after:inset-0 after:opacity-0;
 
     &.active {
-      @apply bg-primary/10 text-primary;
+      @apply bg-primary/10;
     }
 
     &:hover {
@@ -18,7 +18,7 @@
   }
 
   &-heading {
-    @apply text-on-surface/40 text-title-small flex items-center gap-4 p-4;
+    @apply text-on-surface-variant text-title-small flex items-center gap-4 p-4;
   }
 
   &-divider {

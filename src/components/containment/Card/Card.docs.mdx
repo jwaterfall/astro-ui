@@ -2,66 +2,56 @@
 type: component
 title: card
 category: containment
-description: Snackbars provide brief messages about app processes at the bottom of the screen.
+description: Cards contain content and actions about a single subject.
 classes:
-  - name: snackbar
+  - name: card
     type: component
-    description: The snackbar container
-  - name: snackbar-content
+    description: The card container
+  - name: card-body
     type: component
-    description: The text content of the snackbar
-  - name: snackbar-close
+    description: The card body
+  - name: card-title
     type: component
-    description: The close button of the snackbar
-  - name: snackbar-action
+    description: The card title
+  - name: card-image
     type: component
-    description: The action button of the snackbar
+    description: The card image
+  - name: card-footer
+    type: component
+    description: The card footer
 published: true
 ---
 
 <CodePreview title="Default">
-  <div className="snackbar">
-    <span className="snackbar-content">This is a snackbar.</span>
-    <button className="snackbar-close">
-      <MdClose size={20} />
-    </button>
+  <div className="card w-96">
+    <div className="card-body">
+      <h4 className="card-title">This is a card title</h4>
+      {"This is some card content"}
+    </div>
   </div>
 </CodePreview>
 
-<CodePreview title="Without close button">
-  <div className="snackbar">
-    <span className="snackbar-content">This is a snackbar without a close button.</span>
+<CodePreview title="With footer">
+  <div className="card w-96">
+    <div className="card-body">
+      <h4 className="card-title">Play relaxing music</h4>
+      {"From your favorite artists"}
+    </div>
+    <div className="card-footer">
+      <button className="btn btn-tonal">Get started</button>
+    </div>
   </div>
 </CodePreview>
 
-<CodePreview title="With action">
-  <div className="snackbar">
-    <span className="snackbar-content">This is a snackbar with an action button.</span>
-    <button className="snackbar-action">Action</button>
+<CodePreview title="With image">
+  <div className="card w-96">
+    <img src="/artist.jpg" className="card-image aspect-video" />
+    <div className="card-body">
+      <h4 className="card-title">Recommended for you</h4>
+      {"Listen to music from a new artist that you might like based on your listening history."}
+    </div>
+    <div className="card-footer">
+      <button className="btn btn-tonal">Listen now</button>
+    </div>
   </div>
-</CodePreview>
-
-<CodePreview title="Without close button with action">
-  <div className="snackbar">
-    <span className="snackbar-content">Can't send photo. Retry in 5 seconds.</span>
-    <button className="snackbar-action">Retry</button>
-    <button className="snackbar-close">
-      <MdClose size={20} />
-    </button>
-  </div>
-</CodePreview>
-
-<CodePreview title="Without close button with action">
-  <RadixToastProvider duration={999999}>
-    <RadixToastRoot className="snackbar transition-transform ease-linear data-[swipe=cancel]:translate-x-0 data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)]">
-      <span className="snackbar-content">Can't send photo. Retry in 5 seconds.</span>
-      <RadixToastAction altText="retry" className="snackbar-action">
-        Retry
-      </RadixToastAction>
-      <RadixToastClose className="snackbar-close">
-        <MdClose size={20} />
-      </RadixToastClose>
-    </RadixToastRoot>
-    <RadixToastViewport />
-  </RadixToastProvider>
 </CodePreview>

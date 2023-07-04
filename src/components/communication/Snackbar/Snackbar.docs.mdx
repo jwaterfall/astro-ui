@@ -7,12 +7,18 @@ classes:
   - name: snackbar
     type: component
     description: The snackbar container
-  - name: snackbar-content
-    type: component
-    description: The text content of the snackbar
-  - name: snackbar-close
-    type: component
-    description: The close button of the snackbar
+  - name: snackbar-info
+    type: modifier
+    description: Changes the color of the snackbar to info
+  - name: snackbar-success
+    type: modifier
+    description: Changes the color of the snackbar to success
+  - name: snackbar-warning
+    type: modifier
+    description: Changes the color of the snackbar to warning
+  - name: snackbar-error
+    type: modifier
+    description: Changes the color of the snackbar to error
   - name: snackbar-action
     type: component
     description: The action button of the snackbar
@@ -21,46 +27,50 @@ published: true
 
 <CodePreview title="Default">
   <div className="snackbar">
-    <span className="snackbar-content">This is a snackbar.</span>
-    <button className="snackbar-close">
-      <MdClose size={20} />
-    </button>
+    {"You have 5 new messages in your inbox."}
+    <button className="snackbar-action">View</button>
   </div>
 </CodePreview>
 
-<CodePreview title="Without close button">
-  <div className="snackbar">
-    <span className="snackbar-content">This is a snackbar without a close button.</span>
+<CodePreview title="Info">
+  <div className="snackbar snackbar-info">
+    {"There is a new version of this app available."}
+    <button className="snackbar-action">Update</button>
   </div>
 </CodePreview>
 
-<CodePreview title="With action">
-  <div className="snackbar">
-    <span className="snackbar-content">This is a snackbar with an action button.</span>
-    <button className="snackbar-action">Action</button>
+<CodePreview title="Success">
+  <div className="snackbar snackbar-success">
+    {"Your changes have been saved."}
+    <button className="snackbar-action">Undo</button>
   </div>
 </CodePreview>
 
-<CodePreview title="Without close button with action">
-  <div className="snackbar">
-    <span className="snackbar-content">Can't send photo. Retry in 5 seconds.</span>
+<CodePreview title="Warning">
+  <div className="snackbar snackbar-warning">
+    {"The email address you entered is invalid."}
+    <button className="snackbar-action">Edit</button>
+  </div>
+</CodePreview>
+
+<CodePreview title="Error">
+  <div className="snackbar snackbar-error">
+    {"Can't send photo. Retry in 5 seconds."}
     <button className="snackbar-action">Retry</button>
-    <button className="snackbar-close">
-      <MdClose size={20} />
-    </button>
   </div>
 </CodePreview>
 
-<CodePreview title="Without close button with action">
-  <RadixToastProvider duration={999999}>
-    <RadixToastRoot className="snackbar transition-transform ease-linear data-[swipe=cancel]:translate-x-0 data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)]">
-      <span className="snackbar-content">Can't send photo. Retry in 5 seconds.</span>
+<CodePreview title="Without action">
+  <div className="snackbar">You have 5 new messages in your inbox.</div>
+</CodePreview>
+
+<CodePreview title="Using Radix UI" stretchPreview>
+  <RadixToastProvider duration={1000000}>
+    <RadixToastRoot className="snackbar">
+      {"Can't send photo. Retry in 5 seconds."}
       <RadixToastAction altText="retry" className="snackbar-action">
-        Retry
+        {"Retry"}
       </RadixToastAction>
-      <RadixToastClose className="snackbar-close">
-        <MdClose size={20} />
-      </RadixToastClose>
     </RadixToastRoot>
     <RadixToastViewport />
   </RadixToastProvider>

@@ -1,12 +1,12 @@
 .top-app-bar {
-  @apply bg-surface-2 grid h-20 w-full shrink-0 auto-cols-fr grid-flow-col items-center px-8;
+  @apply bg-surface-0 grid h-20 w-full shrink-0 auto-cols-fr grid-flow-col items-center px-4;
 
   &-title {
     @apply text-title-large text-on-surface;
   }
 
   &-section {
-    @apply flex items-center justify-center gap-1.5 first:justify-start last:justify-end;
+    @apply flex items-center justify-center gap-2 first:justify-start last:justify-end;
   }
 
   &-scroll {

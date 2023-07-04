@@ -1,31 +1,31 @@
 .snackbar {
-  @apply rounded-xs bg-surface-2 text-body-medium text-on-surface shadow-elevation-3 flex h-12 w-full max-w-4xl items-center gap-3 px-4;
+  @apply rounded-xs bg-surface-3 text-body-medium text-on-surface shadow-elevation-3 flex h-12 w-full max-w-4xl items-center justify-between gap-3 pl-6 pr-2;
 
-  &:has(&-close) {
-    @apply pr-3;
+  &-info {
+    @apply bg-info text-on-info;
   }
 
-  &:has(&-action):not(:has(&-close)) {
-    @apply pr-2;
+  &-success {
+    @apply bg-success text-on-success;
   }
 
-  &-content {
-    @apply flex-1;
+  &-warning {
+    @apply bg-warning text-on-warning;
+  }
+
+  &-error {
+    @apply bg-error text-on-error;
   }
 
   &-action {
-    @apply rounded-xs text-label-large text-on-primary bg-transparent px-3 py-2;
+    @apply text-body-medium after:rounded-xs relative px-4 py-2 font-medium after:absolute after:inset-0 after:bg-current after:opacity-0;
 
     &:hover {
-      @apply bg-primary/25;
+      @apply after:opacity-10;
     }
-  }
 
-  &-close {
-    @apply rounded-full p-2;
-
-    &:hover {
-      @apply bg-on-surface/10;
+    &:active {
+      @apply scale-95 after:opacity-10;
     }
   }
 }
